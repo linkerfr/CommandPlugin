@@ -1,0 +1,6 @@
+name: Command.plugin
+version: '${project.version}'
+main: linker.command.plugin.Command.main
+api-version: 1.18
+authors: [ Linker ]
+description: Command Plugin for Skyblock
