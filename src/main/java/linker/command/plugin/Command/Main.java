@@ -1,16 +1,15 @@
 package linker.command.plugin.Command;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
+import linker.command.plugin.Command.Commands.CommandB;
+import linker.command.plugin.Command.Commands.CommandDiscord;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
 
-public final class main extends JavaPlugin {
+public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("Command Plugin v1.0 enabled ! Enjoy !");
         this.getCommand("discord").setExecutor(new CommandDiscord());
+        this.getCommand("b").setExecutor(new CommandB());
     }
 
     @Override
