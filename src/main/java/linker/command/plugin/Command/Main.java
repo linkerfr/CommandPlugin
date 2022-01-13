@@ -17,7 +17,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("CommandPlugin is on !");
-        config.addDefault("command.discord", "Change this by your link of your Discord");
+        config.addDefault("command.discord", "\'Change this by your link of your Discord\'");
         config.options().copyDefaults(true);
         saveConfig();
 
