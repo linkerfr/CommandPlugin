@@ -17,7 +17,8 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("CommandPlugin is on !");
-        config.addDefault("command.discord", "\'Change this by your link of your Discord\'");
+        config.addDefault("command.discord", "");
+        config.addDefault("command.b", "");
         config.options().copyDefaults(true);
         saveConfig();
 
@@ -40,6 +41,10 @@ public final class Main extends JavaPlugin {
                     //Test if the command is ok
                     //getLogger().info(player + "a executer la commande /discord");
                 }
+            }
+            if (label.equalsIgnoreCase("b")) {
+                String welcomeMessage = getConfig().getString("command.b");
+                getServer().broadcastMessage(welcomeMessage);
             }
         return false;
     }
