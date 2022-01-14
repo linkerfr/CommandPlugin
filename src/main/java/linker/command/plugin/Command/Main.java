@@ -1,6 +1,8 @@
 package linker.command.plugin.Command;
 
 
+import linker.command.plugin.Command.Commands.Bienvenue;
+import linker.command.plugin.Command.Commands.Discord;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -40,10 +42,10 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("CommandPlugin is on !");
-        config.addDefault("command.discord", "");
-        config.addDefault("command.b", "");
-        config.options().copyDefaults(true);
-        saveConfig();
+        saveDefaultConfig();
+
+        getCommand("discord").setExecutor(new Discord(this));
+        getCommand("b").setExecutor(new Bienvenue(this));
 
     }
 
@@ -54,7 +56,7 @@ public final class Main extends JavaPlugin {
         getLogger().info("CommandPlugin is off !");
     }
 
-    @Override
+/*    @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
             if (label.equalsIgnoreCase("discord")) {
                 if (sender instanceof Player) {
@@ -70,6 +72,6 @@ public final class Main extends JavaPlugin {
                 getServer().broadcastMessage(welcomeMessage);
             }
         return false;
-    }
+    }*/
 
 }
