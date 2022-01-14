@@ -6,7 +6,7 @@
 
     <groupId>linker</groupId>
     <artifactId>command.plugin</artifactId>
-    <version>1.0</version>
+    <version>alpha0.2</version>
     <packaging>jar</packaging>
 
     <name>Command.plugin</name>

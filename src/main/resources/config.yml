@@ -1,0 +1,5 @@
+command:
+  # Discord link , usage : /discord
+  discord: "Change this by your Discord server link"
+  # Welcome broadcast , usage : /b
+  b: "This is a welcome broadcast when a new player comes on server"
