@@ -21,8 +21,6 @@ public class Discord implements CommandExecutor {
             if (label.equalsIgnoreCase("discord")) {
                 sender.sendMessage(discordCmd.getConfig().getString("command.discord").replace("&", "§"));
                 return true;
-                //Test if the command is ok
-                //getLogger().info(player + "a executer la commande /discord");
             }
         }
         return false;

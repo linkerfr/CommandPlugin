@@ -49,29 +49,8 @@ public final class Main extends JavaPlugin {
 
     }
 
-
-
     @Override
     public void onDisable() {
         getLogger().info("CommandPlugin is off !");
     }
-
-/*    @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-            if (label.equalsIgnoreCase("discord")) {
-                if (sender instanceof Player) {
-                    Player player = (Player) sender;
-                    sender.sendMessage(getConfig().getString("command.discord"));
-
-                    //Test if the command is ok
-                    //getLogger().info(player + "a executer la commande /discord");
-                }
-            }
-            if (label.equalsIgnoreCase("b")) {
-                String welcomeMessage = getConfig().getString("command.b");
-                getServer().broadcastMessage(welcomeMessage);
-            }
-        return false;
-    }*/
-
 }
