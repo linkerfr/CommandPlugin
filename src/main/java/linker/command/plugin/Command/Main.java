@@ -40,7 +40,6 @@ public final class Main extends JavaPlugin {
         saveDefaultConfig();
 
         getCommand("display").setExecutor(new Display(this));
-        //getCommand("b").setExecutor(new Bienvenue(this));
 
     }
 
