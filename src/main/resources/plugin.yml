@@ -7,3 +7,7 @@ description: Command Plugin for Skyblock
 commands:
   display:
     description: Display Command.
+  msg:
+    description: Msg command
+  r:
+    description: Reply command

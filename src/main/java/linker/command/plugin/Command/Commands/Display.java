@@ -20,7 +20,7 @@ public class Display implements CommandExecutor {
         Player player = (Player) sender;
         if (label.equalsIgnoreCase("display")) {
             if (args.length == 0) {
-                player.sendMessage("Usage : /display <discord|b>");
+                player.sendMessage("§cUsage : /display <discord|b>");
             } else {
                 if (args[0].equalsIgnoreCase("discord")) {
                     sender.sendMessage(displayCmd.getConfig().getString("command.discord").replace("&", "§"));

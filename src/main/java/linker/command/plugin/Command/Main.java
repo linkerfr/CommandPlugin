@@ -2,11 +2,15 @@ package linker.command.plugin.Command;
 
 
 import linker.command.plugin.Command.Commands.Display;
+import linker.command.plugin.Command.Commands.Message;
+import linker.command.plugin.Command.Commands.ReplyMessage;
+import linker.command.plugin.Command.MessageManager.MessageManager;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
 public final class Main extends JavaPlugin {
+    public MessageManager mM;
     /*
     MIT License
 
@@ -33,13 +37,15 @@ public final class Main extends JavaPlugin {
 
     FileConfiguration config = getConfig();
 
-
     @Override
     public void onEnable() {
         getLogger().info("CommandPlugin is on !");
         saveDefaultConfig();
 
         getCommand("display").setExecutor(new Display(this));
+        getCommand("msg").setExecutor(new Message(this));
+        getCommand("r").setExecutor(new ReplyMessage(this));
+        mM = new MessageManager(this);
 
     }
 
