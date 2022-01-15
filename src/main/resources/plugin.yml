@@ -5,7 +5,5 @@ api-version: 1.18
 authors: [ Linker ]
 description: Command Plugin for Skyblock
 commands:
-  discord:
-    description: Link of Discord.
-  b:
-    description: Welcome command.
+  display:
+    description: Display Command.

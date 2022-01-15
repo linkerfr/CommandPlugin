@@ -1,14 +1,9 @@
 package linker.command.plugin.Command;
 
 
-import linker.command.plugin.Command.Commands.Bienvenue;
-import linker.command.plugin.Command.Commands.Discord;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
+import linker.command.plugin.Command.Commands.Display;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
 
 
 public final class Main extends JavaPlugin {
@@ -44,8 +39,8 @@ public final class Main extends JavaPlugin {
         getLogger().info("CommandPlugin is on !");
         saveDefaultConfig();
 
-        getCommand("discord").setExecutor(new Discord(this));
-        getCommand("b").setExecutor(new Bienvenue(this));
+        getCommand("display").setExecutor(new Display(this));
+        //getCommand("b").setExecutor(new Bienvenue(this));
 
     }
 
