@@ -20,11 +20,11 @@ public class ReplyMessage implements CommandExecutor {
         if(label.equalsIgnoreCase("r")) {
             if (sender instanceof Player){
                 Player messager = (Player) sender;
-                if(replyCmd.mM.getReplyTarget(messager) == null) {
+                if(replyCmd.messageManager.getReplyTarget(messager) == null) {
                     messager.sendMessage("§cPas de conversation en cours !");
                     return true;
                 }
-                Player reciever = replyCmd.mM.getReplyTarget(messager);
+                Player reciever = replyCmd.messageManager.getReplyTarget(messager);
                 String message = "";
                 for (int i = 0; i < args.length; i++) {
                     message += "" + args[i];

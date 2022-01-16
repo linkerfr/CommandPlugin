@@ -25,7 +25,7 @@ public class Message implements CommandExecutor {
                 if (Bukkit.getOfflinePlayer(args[0]).getPlayer() != null) {
                     Player messager = (Player) sender;
                     Player reciever = Bukkit.getOfflinePlayer(args[0]).getPlayer();
-                    messageCmd.mM.setReplyTarget(messager, reciever);
+                    messageCmd.messageManager.setReplyTarget(messager, reciever);
                     args[0] = "";
                     String message = "";
                     for (int i = 0; i < args.length; i++) {
