@@ -11,3 +11,5 @@ commands:
     description: Msg command
   r:
     description: Reply command
+  group:
+    description: Group Command

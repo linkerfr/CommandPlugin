@@ -48,10 +48,11 @@ public final class Main extends JavaPlugin {
         getCommand("display").setExecutor(new Display(this));
         getCommand("msg").setExecutor(new Message(this));
         getCommand("r").setExecutor(new ReplyMessage(this));
+        getCommand("group").setExecutor(new ChatChannel(this));
         messageManager = new MessageManager(this);
         groupManager = new GroupManager();
 
-        getServer().getPluginManager().registerEvents(new ChatChannel(this), this);
+        //getServer().getPluginManager().registerEvents(new ChatChannel(this), this);
 
     }
 
