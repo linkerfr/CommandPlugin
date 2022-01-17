@@ -2,11 +2,14 @@ package linker.command.plugin.Command.MessageManager;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class GroupManager {
+public class GroupManager implements Listener {
 
     public HashMap<String, ArrayList<Player>> channels = new HashMap<String, ArrayList<Player>>();
     public HashMap<Player, String> playerChannel = new HashMap<Player, String>();
@@ -38,5 +41,14 @@ public class GroupManager {
         String channelName = playerChannel.get(player);
         return channels.get(channelName);
     }
+    @EventHandler
+    public void onPlayerChat(AsyncPlayerChatEvent e){
+        Player p = e.getPlayer();
+        e.getRecipients().clear();
+        getChannel(p).stream().forEach(player -> e.getRecipients().add(player));
+        System.out.println("Player is in group");
+    }
+
+
 
 }
